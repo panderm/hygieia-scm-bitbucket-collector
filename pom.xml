@@ -31,22 +31,6 @@
     <url>https://github.com/Hygieia/${repository.name}</url>
   </scm>
 
-  <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-    <site>
-      <id>c1.maven.plugins.website</id>
-      <name>Capital One Maven Plugins Site</name>
-      <url>scm:git:https://${github.username}@github.com/Hygieia/${repository.name}</url>
-    </site>
-  </distributionManagement>
-
   <properties>
     <repository.name>hygieia-scm-bitbucket-collector</repository.name>
     <apache.rat.plugin.version>0.13</apache.rat.plugin.version>
@@ -56,7 +40,7 @@
     <commons.lang.version>3.8.1</commons.lang.version>
     <coveralls.maven.plugin.version>4.3.0</coveralls.maven.plugin.version>
     <developmentTeam>The Hygieia Team</developmentTeam>
-    <jacoco.maven.plugin.version>0.8.3</jacoco.maven.plugin.version>
+    <jacoco.maven.plugin.version>0.8.6</jacoco.maven.plugin.version>
     <jacoco.coverage.percentage.minimum>0.010</jacoco.coverage.percentage.minimum><!-- will fix in future-->
     <jacoco.classes.missed.minimum>15</jacoco.classes.missed.minimum>
     <japicmp.breakBuildOnBinaryIncompatibleModifications>true</japicmp.breakBuildOnBinaryIncompatibleModifications>
@@ -180,6 +164,36 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
     </dependency>
+
+		<!-- Runtime Deps -->
+		<!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>3.6.4</version>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-impl -->
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>2.3.1</version>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.sun.istack/istack-commons-runtime -->
+		<dependency>
+			<groupId>com.sun.istack</groupId>
+			<artifactId>istack-commons-runtime</artifactId>
+			<version>3.0.12</version>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.sun.activation/jakarta.activation -->
+		<dependency>
+			<groupId>com.sun.activation</groupId>
+			<artifactId>jakarta.activation</artifactId>
+			<version>2.0.1</version>
+			<scope>runtime</scope>
+		</dependency>
   </dependencies>
 
   <build>
