@@ -56,7 +56,7 @@
     <commons.lang.version>3.8.1</commons.lang.version>
     <coveralls.maven.plugin.version>4.3.0</coveralls.maven.plugin.version>
     <developmentTeam>The Hygieia Team</developmentTeam>
-    <jacoco.maven.plugin.version>0.8.3</jacoco.maven.plugin.version>
+    <jacoco.maven.plugin.version>0.8.6</jacoco.maven.plugin.version>
     <jacoco.coverage.percentage.minimum>0.010</jacoco.coverage.percentage.minimum><!-- will fix in future-->
     <jacoco.classes.missed.minimum>15</jacoco.classes.missed.minimum>
     <japicmp.breakBuildOnBinaryIncompatibleModifications>true</japicmp.breakBuildOnBinaryIncompatibleModifications>
