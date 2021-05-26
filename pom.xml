@@ -177,6 +177,7 @@
     <groupId>org.springframework.data</groupId>
     <artifactId>spring-data-mongodb</artifactId>
     <version>3.2.1</version>
+			<scope>runtime</scope>
 </dependency>
 		<!-- Runtime Deps -->
 		<!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
