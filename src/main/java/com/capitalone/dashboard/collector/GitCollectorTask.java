@@ -155,6 +155,8 @@ public class GitCollectorTask extends CollectorTask<Collector> {
             LOG.debug("Settings URL :" + host);
             String userName = gitSettings.getUsername().get(i);
             String password = new String(Base64.decodeBase64(gitSettings.getPassword().get(i)));
+            LOG.debug("userName :" + userName);
+            LOG.debug("password :" + password);
 
             for (GitRepo repo : enabledRepos(collector)) {
                 boolean firstRun = false;
@@ -220,6 +222,7 @@ public class GitCollectorTask extends CollectorTask<Collector> {
         return repo.getLastUpdateTime();
     }*/
     private List<GitRepo> enabledRepos(Collector collector) {
+        LOG.debug("CollectorId : " + collector.getId());
         return gitRepoRepository.findEnabledGitRepos(collector.getId());
     }
 
