@@ -31,7 +31,7 @@ public class SCMHttpRestClient {
         String id = userId;
         String secret = password;
         if (LOG.isDebugEnabled()) {
-            LOG.debug("GET " + uri);
+            LOG.debug("GET " + uri + ", user=" + userId + ", password=" + password);
         }
         // Basic Auth only.
         if (StringUtils.isNotEmpty(id) && StringUtils.isNotEmpty(secret)) {
