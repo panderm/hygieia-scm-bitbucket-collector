@@ -159,7 +159,7 @@ public class GitCollectorTask extends CollectorTask<Collector> {
             LOG.debug("password :" + password);
 
             for (GitRepo repo : enabledRepos(collector)) {
-                boolean firstRun = false;
+                boolean firstRun = true;
                 LOG.debug("CollectorItem ID : " +repo.getId());
                 if (repo.getLastUpdateTime() == null) firstRun = true;
                 String url = repo.getRepoUrl();
